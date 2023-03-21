@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 //const request = require('request');
@@ -16,6 +17,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.listen(process.env.PORT || 3000,function() {
     console.log("server started at port 3000");
+    
 });
 
 app.get('/',function(req,res) {
@@ -44,7 +46,7 @@ app.post('/',function(req,res) {
     const url = "https://us21.api.mailchimp.com/3.0/lists/3c868557bd";
     const options = {
         method : "POST",
-        auth : "vamsi:bd346560612475d98b74885dba96f8e6-us21"
+        auth : "vamsi:"+process.env.MAILCHIMP_API_KEY
     }
 
     const request = https.request(url,options,function(response){
@@ -72,14 +74,4 @@ app.post("/failure",function(req,res){
 });
 
 
-//"https://us21.api.mailchimp.com/3.0/lists/3c868557bd";
 
-//a0e2fe5ba8b7e54e7d8ef81366e74978-us21
-
-//api key
-//a0e2fe5ba8b7e54e7d8ef81366e74978-us21
-
-//51585623e7e28e640a0b322820fbebcf-us21
-
-//list id
-//3c868557bd
