@@ -75,13 +75,3 @@ app.post("/failure",function(req,res){
 
 
 
-<<<<<<< HEAD
-=======
-//a0e2fe5ba8b7e54e7d8ef81366e74978-us21
-
-//api key
-//a0e2fe5ba8b7e54e7d8ef81366e74978-us21
-
-//list id
-//3c868557bd
->>>>>>> parent of db5a3e1 (second commit)
