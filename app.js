@@ -46,7 +46,11 @@ app.post('/',function(req,res) {
     const url = "https://us21.api.mailchimp.com/3.0/lists/3c868557bd";
     const options = {
         method : "POST",
+<<<<<<< HEAD
         auth : "vamsi:"+process.env.MAILCHIMP_API_KEY
+=======
+        auth : "vamsi:a0e2fe5ba8b7e54e7d8ef81366e74978-us21"
+>>>>>>> parent of db5a3e1 (second commit)
     }
 
     const request = https.request(url,options,function(response){
@@ -75,3 +79,13 @@ app.post("/failure",function(req,res){
 
 
 
+<<<<<<< HEAD
+=======
+//a0e2fe5ba8b7e54e7d8ef81366e74978-us21
+
+//api key
+//a0e2fe5ba8b7e54e7d8ef81366e74978-us21
+
+//list id
+//3c868557bd
+>>>>>>> parent of db5a3e1 (second commit)
